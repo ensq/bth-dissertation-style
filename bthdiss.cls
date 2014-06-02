@@ -1,10 +1,15 @@
-% ILLC Disseration style.
+% BTH Dissertation Style
+% Blekinge Institute of Technology dissertation/thesis template.
 %
-% Author: Marco Vervoort
-% Based on a Latex 2.09 style file by Maarten de Rijke,
-% and the Book document class for Latex 2e.
-% Code for chapter heads by Martin Stokhof.
+% Author(s):
+% * Eric Nilsson
+% * Marco Vervoort
 %
+% Based on the ILLC Dissertation Style by the Institute for Logic, Language and Computation, University of Amsterdam (used with permission).
+% Licensed under the BSD 3-Clause License.
+% See adjoined LICENSE for more information.
+%
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{illcdiss}[2001/07/18 Illc Dissertation Style]
 \newcommand{\@mult}{1.2}
@@ -45,7 +50,7 @@
 \LoadClass[\@papersizeopt,\@typesizeopt]{book}
 \RequirePackage{graphicx}
 %
-%       To provide backwards compatibility with versions of the book class that 
+%       To provide backwards compatibility with versions of the book class that
 %       do not define \@openbib@code, \newblock, \paperwidth or \paperheight:
 %
 \providecommand{\@openbib@code}{}
@@ -79,8 +84,8 @@
 %       Note that, as opposed to in book.cls, here the definition
 %       of \@makechapterhead does _not_ end with a \nobreak command
 %       but with a \mbox{}, since we'd rather not have the chapter
-%       head move to the next page even if that would result in 
-%       the chapter head being the _only_ thing on the page. 
+%       head move to the next page even if that would result in
+%       the chapter head being the _only_ thing on the page.
 %
 \newlength{\@spacebeforechapterhead}
 \setmlength{\@spacebeforechapterhead}{\@mult}{15pt}
@@ -152,8 +157,8 @@
   \item[\hspace{\labelsep}{\upshape\bfseries #2.}\ {\scshape #1\ ({#3}).}]%
 }
 %
-%   Chapters, sections and other environments are redefined here to no 
-%       longer cause uppercased headings. Headings are italized instead of 
+%   Chapters, sections and other environments are redefined here to no
+%       longer cause uppercased headings. Headings are italized instead of
 %       slanted. The bibliography and index appear in the table of contents.
 %
 \if@twoside
@@ -311,10 +316,10 @@
 }
 
 \newcommand{\abstract}{%
-   \chapter*{Summary}%
-   \addcontentsline{toc}{chapter}{Summary}%
-   \markboth{Summary}{Summary}%
-}
+   \chapter*{Abstract}%
+   \addcontentsline{toc}{chapter}{Abstract}%
+   \markboth{Abstract}{Abstract}%
+} % Originally denoted 'Summary'. Renaming to 'Abstract' in order to match previous BTH dissertation styles.
 
 \newcommand{\curriculum}{%
    \chapter*{Curriculum Vitae}
@@ -344,14 +349,28 @@
 \newenvironment{fact}{\begin{@fact}\upshape}{\end{@fact}}
 \newtheorem{@question}[theorem]{Question}
 \newenvironment{question}{\begin{@question}\upshape}{\end{@question}}
-%
-%   Symbols for AmsTex and Illc
-%
-\newcommand{\illclogo}[1]{%
-   \includegraphics[width=#1]{illclogo}%
+
+% Commands included in order to be compatible with previous - closed source - varieties of the BTH dissertation template:
+\newcommand{\bthcslogo}[1]{%
+    \includegraphics[width=#1]{bth}%
 }
-\newcommand{\illcnotextlogo}[1]{%
-   \includegraphics[width=#1]{illc_no_text_logo}%
+\newcommand{\bthcsnotextlogo}[1]{%
+    \includegraphics[width=#1]{bthnotext}%
 }
+
+\newcommand{\bthlogo}[1]{%
+    \includegraphics[width=#1]{bth}%
+}
+
+\newenvironment{changemargin}[2]{%
+    \begin{list}{}{%
+        \setlength{\topsep}{0pt}%
+        \setlength{\leftmargin}{#1}%
+        \setlength{\rightmargin}{#2}%
+        \setlength{\listparindent}{\parindent}%
+        \setlength{\itemindent}{\parindent}%
+        \setlength{\parsep}{\parskip}%
+    }%
+    \item[]}{\end{list}} % See http://www.albany.edu/~hammond/gellmu/examples/lfaq.xml
 
 \endinput
