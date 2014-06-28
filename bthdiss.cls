@@ -11,7 +11,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{illcdiss}[2001/07/18 Illc Dissertation Style]
+\ProvidesClass{bthdiss}[2014/06/29 BTH Dissertation Style]
 \newcommand{\@mult}{1.2}
 \newcommand{\@typesizeopt}{12pt}
 \DeclareOption{10pt}{%
