@@ -352,14 +352,14 @@
 
 % Commands included in order to be compatible with previous - closed source - varieties of the BTH dissertation template:
 \newcommand{\bthcslogo}[1]{%
-    \includegraphics[width=#1]{bthdiss_logo}%
+    \includegraphics[width=#1]{bthdiss_logo.eps}%
 }
 \newcommand{\bthcsnotextlogo}[1]{%
-    \includegraphics[width=#1]{bthdiss_logo}%
+    \includegraphics[width=#1]{bthdiss_logo.eps}%
 }
 
 \newcommand{\bthlogo}[1]{%
-    \includegraphics[width=#1]{bthdiss_logo}%
+    \includegraphics[width=#1]{bthdiss_logo.eps}%
 }
 
 \newenvironment{changemargin}[2]{%
