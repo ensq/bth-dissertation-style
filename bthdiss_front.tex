@@ -1,0 +1,98 @@
+% BTH Dissertation Style
+% Blekinge Institute of Technology dissertation/thesis template.
+%
+
+\pagestyle{empty}
+\pagenumbering{roman}
+
+% Front page:
+{
+	\setlength{\parindent}{0pt}
+	\changepage{5cm}{1cm}{-0.5cm}{-0.5cm}{}{-2cm}{}{}{} % Values from original template. http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/changepage/changepage.pdf
+	
+	% Thesis number:
+	\begin{small}
+		\vspace{0pt}Thesis no: \bthdissthesisno \\
+		\vspace{0pt}\hfill \bthcsnotextlogo{3cm}
+	\end{small}
+
+	\vfill % Originally a 7cm increment.
+
+	% Thesis title:
+	\begin{center}
+		\begin{Huge}
+			\textbf{\bthdissthesistitle}
+		\end{Huge}
+		
+		\par\medskip % Originally a 0.5cm increment.
+		
+		\begin{Large}
+			\textbf{\bthdissthesissubtitle}
+		\end{Large}
+	
+		\par\bigskip\bigskip % Originally a 3cm increment.
+	
+		\begin{Large}
+			\textbf{\bthdissfirstname\ \bthdisslastname}
+		\end{Large}
+	\end{center}            
+
+	\vfill % Originally a 7cm increment.
+
+	% University Department:
+	\begin{small}
+		\bthdissdept \\
+		Blekinge Institute of Technology\\
+		SE--371 79 Karlskrona, Sweden
+	\end{small}
+
+	% In order to offset the department from page bottom:
+	\bigskip \bigskip \bigskip % TODO: This ought be replaced by simply setting the page bottom margin similar to that of the top margin.
+
+	\clearpage
+}
+
+% Thesis info page:
+{
+	\setlength{\parindent}{0pt}
+	\changepage{5cm}{1cm}{-0.5cm}{-0.5cm}{}{-2cm}{}{}{} % Values from original template. http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/changepage/changepage.pdf
+
+	\begin{small}
+		This thesis is submitted to the \bthdissdept\ at Blekinge Institute of Technology in partial fulfillment of the requirements for the degree of \bthdissdegree . The thesis is equivalent to \bthdissnumweeks\ weeks of full-time studies.
+	\end{small}
+
+	\vfill % Originally a 12cm increment.
+
+	\textbf{Contact Information:}\\
+	Author(s):\\
+	\bthdissfirstname\ \bthdisslastname \\
+	E-mail: \bthdissemail 
+
+	\bigskip
+
+	External advisor: \\
+	\bthdissadvisorext \\
+	\bthdissadvisorextorg 
+
+	\bigskip
+
+	University advisor:\\
+	\bthdissadvisoruni \\
+	\bthdissdept
+
+	\vfill
+
+	\begin{tabular}{p{0.5\linewidth}lcl}
+		\bthdissdept						& Internet	& : & \href{http://www.bth.se}{www.bth.se}\\
+		Blekinge Institute of Technology	& Phone		& : & +46 455 38 50 00\\
+		SE--371 79 Karlskrona, Sweden		& Fax		& : & +46 455 38 50 57\\
+	\end{tabular}
+
+	% In order to offset the department from page bottom:
+	\bigskip \bigskip \bigskip % TODO: This ought be replaced by simply setting the page bottom margin similar to that of the top margin.
+
+	\clearpage
+}
+
+\pagestyle{plain}
+\setcounter{page}{1}

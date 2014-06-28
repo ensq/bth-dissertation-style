@@ -13,8 +13,6 @@
 \DeclareGraphicsExtensions{.pdf}
 
 \begin{document}
-\pagestyle{empty}
-\pagenumbering{roman}
 
 % Personalize these:
 \newcommand{\bthdissthesisno}{\textbf{DEPT}-\textbf{YEAR}-\textbf{NO}} % Thesis number. At BTH, this is given to you only after the thesis has been graded.
@@ -30,115 +28,11 @@
 \newcommand{\bthdissadvisorext}{Dr. Firstname Lastname} % Your external advisor (if applicable).
 \newcommand{\bthdissadvisorextorg}{Corporation AB} % The association of your external advisor.
 
-% Front page:
-{
-	\setlength{\parindent}{0pt}
-	\changepage{5cm}{1cm}{-0.5cm}{-0.5cm}{}{-2cm}{}{}{} % Values from original template. http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/changepage/changepage.pdf
-	
-	% Thesis number:
-	\begin{small}
-		\vspace{0pt}Thesis no: \bthdissthesisno \\
-		\vspace{0pt}\hfill \bthcsnotextlogo{3cm}
-	\end{small}
-
-	\vfill % Originally a 7cm increment.
-
-	% Thesis title:
-	\begin{center}
-		\begin{Huge}
-			\textbf{\bthdissthesistitle}
-		\end{Huge}
-		
-		\par\medskip % Originally a 0.5cm increment.
-		
-		\begin{Large}
-			\textbf{\bthdissthesissubtitle}
-		\end{Large}
-	
-		\par\bigskip\bigskip % Originally a 3cm increment.
-	
-		\begin{Large}
-			\textbf{\bthdissfirstname\ \bthdisslastname}
-		\end{Large}
-	\end{center}            
-
-	\vfill % Originally a 7cm increment.
-
-	% University Department:
-	\begin{small}
-		\bthdissdept \\
-		Blekinge Institute of Technology\\
-		SE--371 79 Karlskrona, Sweden
-	\end{small}
-
-	% In order to offset the department from page bottom:
-	\bigskip \bigskip \bigskip % TODO: This ought be replaced by simply setting the page bottom margin similar to that of the top margin.
-
-	\clearpage
-}
-
-% Thesis info page:
-{
-	\setlength{\parindent}{0pt}
-	\changepage{5cm}{1cm}{-0.5cm}{-0.5cm}{}{-2cm}{}{}{} % Values from original template. http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/changepage/changepage.pdf
-
-	\begin{small}
-		This thesis is submitted to the \bthdissdept\ at Blekinge Institute of Technology in partial fulfillment of the requirements for the degree of \bthdissdegree . The thesis is equivalent to \bthdissnumweeks\ weeks of full-time studies.
-	\end{small}
-
-	\vfill % Originally a 12cm increment.
-
-	\textbf{Contact Information:}\\
-	Author(s):\\
-	\bthdissfirstname\ \bthdisslastname \\
-	E-mail: \bthdissemail 
-
-	\bigskip
-
-	External advisor: \\
-	\bthdissadvisorext \\
-	\bthdissadvisorextorg 
-
-	\bigskip
-
-	University advisor:\\
-	\bthdissadvisoruni \\
-	\bthdissdept
-
-	\vfill
-
-	\begin{tabular}{p{0.5\textwidth}lcl}
-		\bthdissdept						& Internet	& : & \href{http://www.bth.se}{www.bth.se}\\
-		Blekinge Institute of Technology	& Phone		& : & +46 455 38 50 00\\
-		SE--371 79 Karlskrona, Sweden		& Fax		& : & +46 455 38 50 57\\
-	\end{tabular}
-
-	% In order to offset the department from page bottom:
-	\bigskip \bigskip \bigskip % TODO: This ought be replaced by simply setting the page bottom margin similar to that of the top margin.
-
-	\clearpage
-}
+\input{bthdiss_front.tex}
+\input{bthdiss_abstract.tex}
 
 \pagestyle{plain}
 \setcounter{page}{1}
-
-% Abstract page:
-\abstract {\setlength{\parindent}{0pt}
-\begin{changemargin}{+1cm}{+1cm}
-	\textbf{Context}. One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
-
-	\textbf{Objectives}. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.
-
-	\textbf{Methods}. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls. 
-
-	\textbf{Results}. A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
-
-	\textbf{Conclusions}. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather.
-	
-	\bigskip % Originally a 1cm increment.
-	
-	\textbf{Keywords:} 3-4 keywords, maximum 2 of these from the title, starts 1 line below the abstract.
-\end{changemargin}}
 
 % The grouping and clearpage-shabang has been added to accomodate for a mysterious blank page preceding the table of contents.
 \begingroup
