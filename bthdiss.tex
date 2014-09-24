@@ -4,10 +4,14 @@
 
 \documentclass[oneside]{bthdiss} % oneside as to allow single page chapters.
 
-\usepackage{hyperref} % Used to hyperlink institutional website and student e-mail address.
+\usepackage{hyperref} % Used to hyperlink institutional website and
+                      % student e-mail address.
 \usepackage{textcomp} % Times New Roman
-\usepackage{epstopdf} % epstopdf is included to accomodate for .eps images on some platforms (encountered on MikTeX Windows).
-\usepackage{changepage} % Used to change page dimensions. Should be included in most TeX distributions.
+\usepackage{epstopdf} % epstopdf is included to accomodate for .eps
+                      % images on some platforms (encountered on
+                      % MikTeX Windows).
+\usepackage{changepage} % Used to change page dimensions. Should be
+                        % included in most TeX distributions.
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
@@ -16,18 +20,32 @@
 \begin{document}
 
 % Personalize these:
-\newcommand{\bthdissthesisno}{\textbf{DEPT}-\textbf{YEAR}-\textbf{NO}} % Thesis number. At BTH, this is given to you only after the thesis has been graded.
-\newcommand{\bthdissthesistitle}{\textbf{Centered Title Times Font}\\\vspace{0.25cm}\textbf{Size 24 Bold}} % Thesis title.
-\newcommand{\bthdissthesissubtitle}{\textbf{Centered Subtitle Times Font}\\\vspace{0.25cm}\textbf{Size 16 Bold}} % Thesis subtitle (if applicable).
+% Thesis number (at BTH, this is given to you only after the thesis
+% has been graded):
+\newcommand{\bthdissthesisno}{\textbf{DEPT}-\textbf{YEAR}-\textbf{NO}}
+\newcommand{\bthdissthesistitle}{%
+  \textbf{Centered Title Times Font}\\
+  \vspace{0.25cm}\textbf{Size 24 Bold}} % Thesis title.
+\newcommand{\bthdissthesissubtitle}{%
+  \textbf{Centered Subtitle Times Font}\\
+  \vspace{0.25cm}\textbf{Size 16 Bold}} % Thesis subtitle (if applicable).
 \newcommand{\bthdissfirstname}{Firstname} % Your first name.
 \newcommand{\bthdisslastname}{Lastname} % Your last name.
-\newcommand{\bthdissdegree}{Master of Science in Computer Science} % The degree you're aspiring to (go get 'em tiger).
-\newcommand{\bthdissdept}{Dept. Computer Science \& Engineering} % The department you're submitting your thesis to.
-\newcommand{\bthdissnumweeks}{\textbf{XX}} % The number of weeks you've spent on the project.
-\newcommand{\bthdissemail}{\href{mailto:acroyy@student.bth.se}{acroyy@student.bth.se}} % Your student e-mail adress.
-\newcommand{\bthdissadvisoruni}{Prof. Firstname Lastname} % The title and name of the university advisor that has been assigned to you.
-\newcommand{\bthdissadvisorext}{Dr. Firstname Lastname} % Your external advisor (if applicable).
-\newcommand{\bthdissadvisorextorg}{Corporation AB} % The association of your external advisor.
+% The degree you're aspiring to (go get 'em tiger):
+\newcommand{\bthdissdegree}{Master of Science in Computer Science}
+% The department you're submitting your thesis to:
+\newcommand{\bthdissdept}{Dept. Computer Science \& Engineering}
+% The number of weeks you've spent on the project.
+\newcommand{\bthdissnumweeks}{\textbf{XX}}
+% Your student e-mail adress:
+\newcommand{\bthdissemail}{%
+  \href{mailto:acroyy@student.bth.se}{acroyy@student.bth.se}}
+% The title and name of the university advisor that has been assigned to you:
+\newcommand{\bthdissadvisoruni}{Prof. Firstname Lastname}
+% Your external advisor (if applicable):
+\newcommand{\bthdissadvisorext}{Dr. Firstname Lastname}
+% The association of your external advisor:
+\newcommand{\bthdissadvisorextorg}{Corporation AB}
 
 \input{bthdiss_front.tex}
 \input{bthdiss_abstract.tex}
@@ -35,13 +53,14 @@
 \pagestyle{plain}
 \setcounter{page}{1}
 
-% The grouping and clearpage-shabang has been added to accomodate for a mysterious blank page preceding the table of contents.
-\begingroup
-\let\cleardoublepage\clearpage
-\tableofcontents
-\endgroup
+% The grouping and clearpage-shabang has been added to accomodate for
+% a mysterious blank page preceding the table of contents.
+\begingroup%
+\let\cleardoublepage\clearpage%
+\tableofcontents%
+\endgroup%
 
-\cleardoublepage
+\cleardoublepage%
 \pagestyle{headings}
 \pagenumbering{arabic}
 
