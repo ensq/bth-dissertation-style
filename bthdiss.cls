@@ -1,14 +1,12 @@
-% BTH Dissertation Style (see https://github.com/CaterHatterPillar/bth-dissertation-style)
+% BTH Dissertation Style (see
+% https://github.com/CaterHatterPillar/bth-dissertation-style)
 % Blekinge Institute of Technology dissertation/thesis template.
 %
-% Author(s):
-% * Eric Nilsson
-% * Marco Vervoort
-%
-% Based on the ILLC Dissertation Style by the Institute for Logic, Language and Computation, University of Amsterdam (used with permission).
+% Based on the ILLC Dissertation Style by the Institute for Logic,
+% Language and Computation, University of Amsterdam (used with
+% permission).
 % Licensed under the BSD 3-Clause License.
 % See adjoined LICENSE for more information.
-%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{bthdiss}[2014/06/29 BTH Dissertation Style]
@@ -319,7 +317,8 @@
    \chapter*{Abstract}%
    \addcontentsline{toc}{chapter}{Abstract}%
    \markboth{Abstract}{Abstract}%
-} % Originally denoted 'Summary'. Renaming to 'Abstract' in order to match previous BTH dissertation styles.
+} % Originally denoted 'Summary'. Renaming to 'Abstract' in order to
+  % match previous BTH dissertation styles.
 
 \newcommand{\curriculum}{%
    \chapter*{Curriculum Vitae}
@@ -350,7 +349,8 @@
 \newtheorem{@question}[theorem]{Question}
 \newenvironment{question}{\begin{@question}\upshape}{\end{@question}}
 
-% Commands included in order to be compatible with previous - closed source - varieties of the BTH dissertation template:
+% Commands included in order to be compatible with previous - closed
+% source - varieties of the BTH dissertation template:
 \newcommand{\bthcslogo}[1]{%
     \includegraphics[width=#1]{bthdiss_logo.eps}%
 }
@@ -371,6 +371,7 @@
         \setlength{\itemindent}{\parindent}%
         \setlength{\parsep}{\parskip}%
     }%
-    \item[]}{\end{list}} % See http://www.albany.edu/~hammond/gellmu/examples/lfaq.xml
+    \item[]}{\end{list}}
+% See http://www.albany.edu/~hammond/gellmu/examples/lfaq.xml
 
 \endinput
