@@ -5,6 +5,12 @@ bthdiss.pdf
 .DS_Store
 __MACOSX/
 
+## Emacs garbage:
+\#*\#
+
+## Other garbage:
+*~
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
